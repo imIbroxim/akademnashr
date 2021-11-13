@@ -1,3 +1,9 @@
+:root {
+    --font-family-text: 'Roboto', 'Roboto Condensed', 'Arial', sans-serif;
+    --font-family-heading: 'Roboto Condensed', 'Arial', sans-serif;
+    --brand-bg-color:#ff7500;
+    --outline-color:var(--brand-bg-color);
+}
 /* GLOBAL  */
 html {
     box-sizing: border-box;
@@ -17,7 +23,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Arial", sans-serif;
+    font-family: var(--font-family-text);
     font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
@@ -26,19 +32,309 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
 }
-
+a {
+    text-decoration: none;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+*:focus {
+    outline: 2px dotted var(--outline-color);
+    outline-offset: 3px;
+}
 /* CONTAINER  */
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1150px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin-left: auto;
     margin-right: auto;
 }
+/* d-flex */
+    .d-flex {
+        display: flex;
+    }
+    .jc-sb {
+        justify-content: space-between;
+    }
 
 /* MAIN-CONTENT */
 .main-content {
     flex-grow: 1;
+}
+
+
+/* HEADER  */
+.site-header {
+
+}
+.logo-akademnashr-site-nav-btn-wrapper {
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.logo-akademnashr-link {
+}
+.logo-akademnashr__img {
+    display: block;
+    transition:opacity .4s ease;
+}
+.logo-akademnashr__img:hover {
+    opacity: 0.8;
+}
+.logo-akademnashr__img:active {
+    opacity: 0.6;
+}
+.site-nav-btn__link-wrapper {
+    align-items: center;
+    font-size: 13px;
+    line-height: 15px;
+}
+.site-nav {
+    margin-right: 32px;
+}
+.site-nav__lists {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.active {
+    border-bottom: 3px solid var(--brand-bg-color);
+}
+.list-site-nav:not(:last-child) {
+    margin-right: 32px;
+}
+.site-nav__link {
+    padding-bottom: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 1px;
+    transition:color .4s ease, opacity .4s ease;
+}
+.site-nav__link:hover {
+    color: var(--brand-bg-color);
+}
+.site-nav__link:active {
+    opacity: 0.6;
+}
+.btn__link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color:var(--brand-bg-color);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    transition:opacity .4s ease;
+}
+.btn__link:hover {
+    opacity: 0.8;
+}
+.btn__link:active {
+    opacity: 0.6;
+}
+
+/* SITE-PROMO  */
+.main-content {
+}
+.site-promo-wrapper {
+    justify-content: space-between;
+}
+.site-promo {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color:#252420;
+}
+.container {
+}
+.site-promo__content {
+    padding-top: 40px;
+    width: 387px;
+    color: #fff;
+}
+.site-highlight {
+    width: 80px;
+    height: 3px;
+    border: 0;
+    margin: 0;
+    background-color:var(--brand-bg-color);
+}
+.site-promo__heading {
+    margin-bottom: 24px;
+    font-family: var(--font-family-heading);
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+.site-promo__text {
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+}
+.btn__link {
+}
+.site-promo__img-wrapper {
+}
+.site-promo__img {
+    display: block;
+    margin-bottom: -142px;
+    border-radius:8px;
+    box-shadow: 24px 24px 0px rgba(255, 117, 0, 0.6);
+}
+
+/* SITE WHY ARE WE  */
+.site-why-are-we {
+    padding-top: 210px;
+    padding-bottom: 210px;
+
+}
+.site-highlight {
+}
+.site-why-are-we__heading {
+    width: 435px;
+    margin-top: 24px;
+    margin-bottom: 72px;
+    font-family: var(--font-family-heading);
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+.site-why-are-we__cols {
+    justify-content: space-between;
+
+}
+.site-why-are-we__row {
+    width: 340px;
+    flex-direction: column;
+}
+.site-why-are-we__row-img {
+    margin-bottom: 32px;
+}
+.site-why-are-we__row-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family-heading);
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+.site-why-are-we__row-text {
+    width: 314px;
+    letter-spacing: 0.5px;
+}
+
+/* site-action-for-child */
+.site-action-for-child {
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+.container {
+}
+.site-action-for-child-wrapper {
+    justify-content: space-between;
+    border-radius:12px;
+    padding: 64px;
+    background-color:#252420;
+    color: #fff;
+}
+.site-action-for-child-content {
+    width: 440px;
+}
+.site-action-for-child__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-family: var(--font-family-heading);
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+.site-action-for-child__text-wrapper {
+    margin-bottom: 24px;
+}
+.site-action-for-child__text {
+    letter-spacing: 0.5px;
+}
+.site-action-for-child__text:not(:last-child) {
+    margin-bottom: 12px;
+}
+.site-action-for-child__text strong {
+    color:var(--brand-bg-color)
+}
+.btn__link {
+}
+.site-action-for-child-img-wprapper {
+}
+.site-action-for-child__img {
+    margin-top: -149px;
+    display: block;
+    border-radius:12px;
+}
+
+/* FOOTER */
+.site-footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background-color:#f8f8f8;
+}
+.site-footer__top {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid rgba(37, 36, 32, 0.5);
+}
+.logo-akademnashr-link {
+}
+.logo-akademnashr__img {
+}
+.site-footer__socials {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+
+}
+.site-footer__list:not(:last-child) {
+    margin-right: 16px;
+}
+.site-footer__social-link {
+}
+.site-footer__social-link svg {
+    display: block;
+}
+path {
+    transition: fill .4s ease, opacity .4s ease;
+}
+.site-footer__social-link svg:hover path{
+    fill: var(--brand-bg-color);
+}
+.site-footer__social-link svg:active path{
+    opacity: 0.6;
+}
+.site-footer-lists {
+    width: 224px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-right: 68px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.list-site-footer:not(:last-child) {
+    margin-bottom: 16px;
+}
+.list-site-footer__link {
+    line-height: 19px;
+    color: #252420;
+    transition:color .4s ease, opacity .4s ease;
+}
+.list-site-footer__link:hover {
+    color: var(--brand-bg-color);
+}
+.list-site-footer__link:active {
+    opacity: 0.6;
 }
